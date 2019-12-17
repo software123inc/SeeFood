@@ -13,6 +13,7 @@
 		C747C26F23A8518C009890D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C747C26D23A8518C009890D4 /* Main.storyboard */; };
 		C747C27123A8518C009890D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C747C27023A8518C009890D4 /* Assets.xcassets */; };
 		C747C27423A8518C009890D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C747C27223A8518C009890D4 /* LaunchScreen.storyboard */; };
+		C747C27C23A851B0009890D4 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C747C27B23A851B0009890D4 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C747C27023A8518C009890D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C747C27323A8518C009890D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C747C27523A8518C009890D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C747C27B23A851B0009890D4 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		C747C26623A8518C009890D4 /* SeeFood */ = {
 			isa = PBXGroup;
 			children = (
+				C747C27523A8518C009890D4 /* Info.plist */,
 				C747C26723A8518C009890D4 /* AppDelegate.swift */,
 				C747C26923A8518C009890D4 /* SceneDelegate.swift */,
-				C747C26B23A8518C009890D4 /* ViewController.swift */,
-				C747C26D23A8518C009890D4 /* Main.storyboard */,
 				C747C27023A8518C009890D4 /* Assets.xcassets */,
-				C747C27223A8518C009890D4 /* LaunchScreen.storyboard */,
-				C747C27523A8518C009890D4 /* Info.plist */,
+				C747C27D23A851B8009890D4 /* Controllers */,
+				C747C27F23A851D2009890D4 /* Model */,
+				C747C27E23A851C7009890D4 /* Views */,
 			);
 			path = SeeFood;
+			sourceTree = "<group>";
+		};
+		C747C27D23A851B8009890D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C747C26B23A8518C009890D4 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C747C27E23A851C7009890D4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C747C26D23A8518C009890D4 /* Main.storyboard */,
+				C747C27223A8518C009890D4 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C747C27F23A851D2009890D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C747C27B23A851B0009890D4 /* Inceptionv3.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C747C26C23A8518C009890D4 /* ViewController.swift in Sources */,
+				C747C27C23A851B0009890D4 /* Inceptionv3.mlmodel in Sources */,
 				C747C26823A8518C009890D4 /* AppDelegate.swift in Sources */,
 				C747C26A23A8518C009890D4 /* SceneDelegate.swift in Sources */,
 			);

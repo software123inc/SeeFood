@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         present(imagePicker, animated: true, completion: nil)
     }
     
-    func detect(image:CIImage) {
+    fileprivate func detect(image:CIImage) {
         guard let model = try? VNCoreMLModel(for: Inceptionv3().model) else {
             fatalError("Loading CoreML model failed")
         }
@@ -41,7 +41,10 @@ class ViewController: UIViewController {
                     fatalError("Model failed to process image.")
                 }
                 
-                print(results)
+                print(results.first?.identifier ?? "nada")
+                if let firstResult = results.first {
+                    self.navigationItem.title = firstResult.identifier.contains("hotdog") ? "Hotdog!" : "Not Hotdog!"
+                }
             }
         }
         
